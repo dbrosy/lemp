@@ -9,7 +9,7 @@ services:
       MYSQL_ROOT_PASSWORD: p4ssw0rd!
     networks:
       - back
-phpmyadmin:
+  phpmyadmin:
     depends_on:
       - db
     image: phpmyadmin/phpmyadmin
