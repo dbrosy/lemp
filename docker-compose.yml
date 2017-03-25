@@ -14,7 +14,7 @@ services:
       - 80:80 # Expose http and https
       - 443:443
     networks:
-      - back
+      - backend
   db:
     image: mariadb
     restart: always
@@ -23,7 +23,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: p4ssw0rd!
     networks:
-      - back
+      - backend
   phpmyadmin:
     depends_on:
       - db
@@ -35,7 +35,7 @@ services:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: p4ssw0rd!
     networks:
-      - back
+      - backend
 networks:
   back:
 volumes:
