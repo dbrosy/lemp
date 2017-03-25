@@ -1,1 +1,3 @@
 # lemp
+
+nginx, php, mariadb
